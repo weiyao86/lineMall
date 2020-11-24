@@ -1,0 +1,42 @@
+.van-dialog__confirm,
+.van-dialog__confirm:active {
+    color: $text-color;
+}
+
+.van-toast {
+    width: fit-content;
+    min-width: 180px;
+
+    .van-toast__text {
+        max-width: 100%;
+        max-height: 400px;
+        overflow: auto;
+    }
+}
+
+.van-checkbox__icon,
+.van-radio__icon {
+    width: 60px;
+
+    .van-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    &--checked .van-icon {
+        background-color: $border-active-cls;
+        border-color: $border-active-cls;
+    }
+}
+
+.custom-image {
+    .van-empty__image {
+        width: 118px;
+        height: 118px;
+    }
+
+    .van-empty__description {
+        font-size:36px;
+        color:$text-color;
+    }
+}

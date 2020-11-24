@@ -1,0 +1,14 @@
+.person-wrap {
+    min-height: 100%;
+    .btns-wrap{
+        margin:100px 50px 20px;
+        .submit-btn{
+            background-color: $edit-buttons-bg;
+            border:$edit-buttons-bg;
+        }
+    }
+    .cell-custom-item {
+        height: 140px;
+        align-items: flex-end;
+      }
+}

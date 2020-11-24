@@ -1,0 +1,132 @@
+.shop-cart-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $theme-gray-bg;
+
+    .list {
+        .categroy-item {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px 30px 0;
+
+            .title {
+                /deep/ .van-checkbox__label {
+                    color: $text-color;
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+            }
+
+            .inner-wrap {
+                /deep/ .van-swipe-cell {
+                    margin: 0 -30px;
+                }
+
+                .inner-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    padding: 40px 30px 40px 50px;
+
+                    .ck-wrap {
+                        align-self: center;
+
+                        .check {
+                            width: 60px;
+                        }
+                    }
+
+                    .img-wrap {
+                        width: 190px;
+                        height: 190px;
+                        overflow: hidden;
+                        border: 2px solid #ededed;
+                        border-radius: 10px;
+
+                        .ad-img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .text-wrap {
+                        flex: 1;
+                        padding-left: 20px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-between;
+                        min-width: 0;
+                        .title {
+                            font-size: 26px;
+                            line-height: 36px;
+                            height: 70px;
+                            word-break: break-all;
+                        }
+
+                        .spec-wrap {
+                            padding: 0 20px;
+                            color: #999;
+                            background-color: $theme-gray-bg;
+                            font-size: 24px;
+                            height: 40px;
+                            line-height: 46px;
+                            align-self: flex-start;
+                            .spec-text{
+                                flex:1;
+                                max-width: 320px;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            .van-icon {
+                                padding-left: 10px;
+                                width:34px;
+                            }
+
+                        }
+
+                        .bottom-wrap {
+                            height: 50px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+
+                            .price {
+                                color: $font-active-cls;
+                                font-size: 30px;
+                                font-weight: bold;
+
+                                .symbol {
+                                    font-size: 22px;
+                                }
+                            }
+
+                            .calc-num {
+                                border-radius: 40px;
+                                background-color: $theme-gray-bg;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .submit-btn {
+        .van-submit-bar__price {
+            color: $font-active-cls;
+        }
+
+        .van-button {
+            background: $border-active-cls;
+            border-color: $border-active-cls;
+            border-radius: 10px;
+        }
+    }
+
+    .popup-outer-wrap {
+        overflow: unset;
+    }
+}

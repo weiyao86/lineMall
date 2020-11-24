@@ -1,0 +1,24 @@
+.add-wrap {
+    .wrap {
+      padding: 40px 50px;
+      /deep/ .van-cell {
+        padding: 20px 0;
+        &::after {
+          left: 0;
+          right: 0;
+        }
+      }
+      .submit-btn {
+        margin-top: 100px;
+        height: 90px;
+        border-radius: 10px;
+        background: $edit-buttons-bg;
+        border-color: $edit-buttons-bg;
+      }
+     
+      .cell-custom-item {
+        height: 140px;
+        align-items: flex-end;
+      }
+    }
+  }

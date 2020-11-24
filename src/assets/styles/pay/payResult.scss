@@ -1,0 +1,57 @@
+.pay-result-wrap {
+    min-height: 100%;
+    background-color: $theme-gray-bg;
+
+    .list {
+        .wrap {
+            text-align: center;
+            background: #fff;
+            padding: 90px 0 70px;
+            .icon-wrap {
+                font-size: 100px;
+                
+                .success {
+                    color: #69bf73;
+                }
+
+                .error {
+                    color: #fe5502;
+                }
+            }
+
+            .pay-status {
+                padding:50px 50px 0;
+                font-size: 36px;
+            }
+
+            .reson {
+                padding:50px 80px 0;
+                font-size: 30px;
+                color: #999;
+            }
+
+            .footer-btns-wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                background-color: #fff;
+                margin-top: 50px;
+
+                .confirm-pay {
+                    flex: 1;
+                    height: 80px;
+                    line-height: 80px;
+                    border-radius: 10px;
+                    font-size: 30px;
+                    margin: 0;
+                    color: $font-active-cls;
+                    background: #fff;
+                    border: 2px solid $font-active-cls;
+                    margin: 10px 50px;
+                }
+            }
+        }
+    }
+
+
+}

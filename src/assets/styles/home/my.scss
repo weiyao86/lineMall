@@ -1,0 +1,127 @@
+.person-center {
+    %side-margin {
+        margin: 0 30px;
+    }
+    padding:25px 0;
+    .header {
+        height: 246px;
+        @extend %side-margin;
+        background: url("../../images/person_header_bg.png")no-repeat center/cover transparent;
+        padding: 0 28px;
+        display: flex;
+
+        .wrap {
+            flex: 1;
+            display: flex;
+
+            .user-wrap {
+                flex: 1;
+                display: flex;
+                align-items: center;
+
+                .avatar {
+                    border-radius: 50%;
+                    border: 4px solid #fff;
+                    width: 132px;
+                    height: 132px;
+                    display: flex;
+                    margin: 0 22px;
+
+                    background: {
+                        position: center;
+                        repeat: no-repeat;
+                        size: cover;
+                    }
+
+                    .icon {
+                        flex: 1;
+                        width: auto;
+                        height: auto;
+                        color: #fff;
+                    }
+                }
+
+                .name {
+                    font-weight: bold;
+                    color: $text-color;
+                    padding: 0 10px;
+                    font-size: 40px;
+                }
+
+            }
+
+            .person-info {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .tag {
+                    color: $font-active-cls;
+                    background-color: #fff;
+                    height: 42px;
+                    padding: 0 14px;
+
+                }
+            }
+
+        }
+
+    }
+
+    .content {
+        @extend %side-margin;
+
+        .cell-custom-item {
+            /deep/ .van-cell__title{
+                padding-left:44px;
+            }
+            min-height: 110px;
+        }
+
+        .icon-swap-card,
+        .icon-my-order,
+        .icon-after-sale,
+        .icon-address {
+            width:50px;
+            height:50px;
+            background: {
+                repeat: no-repeat;
+                size: contain;
+                position: top;
+                color: transparent;
+            }
+        }
+
+        .icon-swap-card {
+            background-image: url('../../images/icon-swap-card.png');
+        }
+
+        .icon-my-order {
+            background-image: url('../../images/icon-my-order.png');
+        }
+
+        .icon-after-sale {
+            background-image: url('../../images/icon-after-sale.png');
+        }
+
+        .icon-address {
+            background-image: url('../../images/icon-address.png');
+        }
+    }
+
+    .footer {
+        @extend %side-margin;
+        margin-top: 188px;
+
+        .wrap {
+            padding: 0 32px;
+
+            .sign-out {
+                height: 90px;
+                color: #666;
+                font-size: 30px;
+            }
+        }
+    }
+
+}

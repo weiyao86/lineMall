@@ -1,0 +1,250 @@
+.confirm-order-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $theme-gray-bg;
+
+    .list {
+        .address-wrap {
+            position:sticky;
+            top:0;
+            background: #fff;
+            margin: 20px 0;
+            padding: 0 30px;
+            height: 200px;
+            z-index:2;
+
+            .has-address,.no-address {
+                height: inherit;
+                display: flex;
+                align-items: center;
+
+                .icon-wrap {
+                    .icon-kd {
+                        background: url("../../../assets/images/kd.png")no-repeat top/cover transparent;
+                        width: 100px;
+                        height: 64px;
+                        display: inline-block;
+                    }
+                }
+
+                .a-content {
+                    flex: 1;
+                    align-self: stretch;
+                    padding: 0 10px 0 30px;
+                    min-width: 0;
+                    .a-title {
+                        line-height: 60px;
+                        font-size: 32px;
+                        font-weight: 500;
+                        padding: 20px 0 10px;
+                        display: flex;
+                        .a-name{
+                        }
+                        .a-tel {
+                            width:260px;
+                            padding-left: 50px;
+                        }
+                    }
+
+                    .a-desc {
+                        font-size: 26px;
+                        line-height: 36px;
+                        height: 72px;
+                    }
+                }
+
+                .edit-address-arrow {
+                    align-self: stretch;
+                    display: flex;
+                    align-items: center;
+
+                    .van-icon-arrow {
+                        font-size: 32px;
+                        color: #ccc;
+                    }
+                }
+            }
+
+            .no-address {
+                justify-content: center;
+                .text-wrap{
+                    flex:1;
+                    font-size:30px;
+                    font-weight: 500;
+                    text-align: center;
+                    .go-add{
+                        color:$font-active-cls;
+                        font-weight: inherit;
+                        padding-left: 20px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+
+        .categroy-item {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 30px 0;
+
+            .c-title {
+                margin: 0 30px;
+                color: $text-color;
+                font-size: 26px;
+                font-weight: bold;
+            }
+
+            .inner-wrap {
+                .inner-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    padding: 40px 30px 40px 50px;
+
+                    .ck-wrap {
+                        align-self: center;
+
+                        .check {
+                            width: 60px;
+                        }
+                    }
+
+                    .img-wrap {
+                        width: 190px;
+                        height: 190px;
+                        overflow: hidden;
+                        border: 2px solid #ededed;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        .ad-img {
+                            width: 186px;
+                            height: 186px;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .text-wrap {
+                        flex: 1;
+                        padding-left: 20px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-between;
+
+                        .title {
+                            font-size: 26px;
+                            line-height: 36px;
+                            height: 70px;
+                            word-break: break-all;
+                        }
+
+                        .spec-wrap {
+                            align-self: flex-start;
+                            padding: 0 20px;
+                            color: #999;
+                            font-size: 24px;
+                            height: 40px;
+                            line-height: 46px;
+                        }
+
+                        .bottom-wrap {
+                            height: 50px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+
+                            .price {
+                                color: $font-active-cls;
+                                font-size: 30px;
+                                font-weight: bold;
+
+                                .symbol {
+                                    font-size: 22px;
+                                }
+                            }
+
+                            .calc-num {
+                                font-size: 20px;
+
+                                .num {
+                                    padding-left:10px;
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-total {
+                margin: 0 30px;
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                min-width: 0;
+
+                .label-desc {
+                    color: #999;
+                    font-size: 24px;
+                }
+
+                .money-text {
+                    padding: 0 4px;
+                    font-size: 26px;
+                    line-height: 30px;
+                    flex: 1;
+                }
+
+                .num-wrap {
+                    color: #999;
+                    font-size: 24px;
+                    padding: 0 4px;
+
+                    .num-text {
+                        color: $text-color;
+                        padding: 0 4px;
+                    }
+                }
+
+                .sigle-total {
+                    font-size: 26px;
+                    color: $text-color;
+
+                    .symbol {
+                        color: $font-active-cls;
+                        font-size: 22px;
+                    }
+
+                    .goods-money {
+                        color: $font-active-cls;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .submit-btn {
+        .van-submit-bar__price {
+            color: $font-active-cls;
+        }
+
+        .van-button {
+            background: $border-active-cls;
+            border-color: $border-active-cls;
+            border-radius: 10px;
+        }
+
+        .total-money {
+            font-size: 24px;
+            color: #999;
+
+            .money {
+                padding: 0 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.address-list-wrap {
+    min-height: 100%;
+
+    .list {
+        .item {
+            min-height: 140px;
+            padding: 0 30px;
+            overflow: hidden;
+            display: flex;
+
+            .checked-wrap {
+                width: 90px;
+                display: flex;
+                align-items: center;
+            }
+
+            .left,
+            .right {
+                display: flex;
+                align-items: center;
+            }
+
+            .left {
+                flex: 1;
+                flex-flow: column;
+                align-items: normal;
+
+                .user {
+                    display: flex;
+                    align-items: flex-end;
+                    min-height: 70px;
+                    word-break: break-all;
+                    .name,
+                    .tel {
+                        font-weight: bold;
+                        font-size: 32px;
+                    }
+
+                    .tel{
+                        padding-left:40px;
+                        min-width: 260px;
+                    }
+
+                    .tag-icon {
+                        margin: 0 12px;
+                        background-color: $font-active-cls;
+                    }
+                }
+
+                .address {
+                    padding-top: 20px;
+                    font-size: 26px;
+                    line-height: 46px;
+                }
+            }
+
+            .right {
+                font-size: 36px;
+                width: 46px;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .item-add-wrap {
+        @include fixed-btns-bottom-wrap;
+    }
+
+    .normal-btns {
+        @include normal-btns-wrap;
+    }
+}

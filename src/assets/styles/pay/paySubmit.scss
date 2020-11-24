@@ -1,0 +1,124 @@
+.pay-submit-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $theme-gray-bg;
+
+    .list {
+        .money-wrap {
+            height: 340px;
+            background: #fff;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            .money-text {
+                .symbol {
+                    font-size: 42px;
+                }
+
+                .money {
+                    font-size: 90px;
+                    font-weight: bold;
+                }
+            }
+
+            .money-status {
+                font-size: 26px;
+                color: #666;
+                padding: 20px;
+            }
+        }
+
+        .card-list,.no-card-list {
+            background: #fff;
+            margin-top: 20px;
+            padding: 25px;
+
+            .c-title {
+                font-size: 30px;
+                line-height: 80px;
+            }
+
+            .detail {
+                .d-item {
+                    display: flex;
+                    height: 142px;
+                    box-shadow: 0 0px 10px -6px #fe5502;
+                    border-radius: 10px;
+                    padding: 30px 10px 30px 30px;
+                    margin-top: 20px;
+
+                    .left {
+                        flex: 1;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-around;
+
+                        .top-wrap,
+                        .bottom-wrap {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        .top-wrap {
+                            .card-name {
+                                font-size: 34px;
+                            }
+
+                            .price {
+                                font-size: 34px;
+                                .symbol{
+                                    font-size:24px;
+                                }
+                            }
+                        }
+
+                        .bottom-wrap {
+                            font-size: 22px;
+                            color: #999;
+
+                            .card-date {
+                                padding: 0 20px;
+                            }
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+                        padding-left: 34px;
+                    }
+                }
+            }
+
+        }
+
+        .no-card-list{
+            padding:80px 0;
+        }
+    }
+
+    .footer-btns-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content:space-between;
+        align-items: flex-start;
+        background-color: #fff;
+
+        .confirm-pay {
+            flex:1;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 10px;
+            font-size: 30px;
+            margin: 0;
+            color: #fff;
+            background: $font-active-cls;
+            border: 2px solid $font-active-cls;
+            margin:10px 50px;
+        }
+    }
+}

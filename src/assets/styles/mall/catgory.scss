@@ -1,0 +1,36 @@
+.category {
+    /deep/ {
+        .van-search {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 14px 32px;
+
+            .van-search__content {
+                border: 2px solid $border-active-cls;
+                border-right-width: 0;
+                background-color: #fff;
+            }
+
+            .van-search__action {
+                line-height: 60px;
+                margin-left: -2px;
+                padding: 0;
+
+                &:active {
+                    background: transparent;
+                }
+            }
+
+            .btn-search {
+                display: inline-block;
+                border: 2px solid $border-active-cls;
+                border-radius: 0 14px 14px 0;
+                background: $border-active-cls;
+                color: #fff;
+                padding: 0 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.detail-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $theme-gray-bg;
+
+    .list {
+        .header-wrap {
+            position: relative;
+            background-color: #fff;
+
+            .van-swipe {
+                height: 760px;
+
+                .ad-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    overflow: hidden;
+                }
+            }
+
+            .text-wrap {
+                margin: 0 30px;
+                padding:10px 0;
+
+                .title {
+                    height: 110px;
+                    line-height: 55px;
+                    font-size: 34px;
+                    font-weight: bold;
+                }
+
+                .desc {
+                    height: 60px;
+                    font-size: 24px;
+                    color: #999;
+                    line-height: 60px;
+                }
+            }
+
+        }
+
+        .cell-custom-item {
+            background-color: #fff;
+            margin-top: 20px;
+            min-height: 110px;
+
+            .van-cell__title {
+                width: 100px;
+                flex: none;
+
+                span {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+
+            .van-cell__value {
+                text-align: left;
+                .num{
+                    margin-left:20px;
+                }
+            }
+        }
+
+        .divider {
+            width: 210px;
+            height: 60px;
+            margin: 0 auto;
+
+            &:after {
+                margin-left: 16px;
+            }
+
+            &:before {
+                margin-right: 16px;
+            }
+        }
+
+        .detail-imgs {
+            font-size: 0;
+            width: 100%;
+
+            .item {
+                & /deep/ img {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+            }
+        }
+    }
+
+    .footer-btns-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content:space-between;
+        align-items: flex-start;
+        background-color: #fff;
+
+        .add-shopcart,
+        .buy-now {
+            flex:1;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 0;
+            font-size: 30px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .add-shopcart {
+            border: 2px solid #fff;
+            background: #fff;
+            color:#666;
+        }
+
+        .buy-now {
+            background: $font-active-cls;
+            border: 2px solid $font-active-cls;
+        }
+    }
+
+    .popup-outer-wrap {
+        overflow: unset;
+    }
+}

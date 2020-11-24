@@ -1,0 +1,27 @@
+.search-wrap{
+    /deep/ .van-search__action{
+        line-height:60px;
+    }
+    .inner{
+        padding: 50px 30px;
+        .title{
+            height:50px;
+            line-height:50px;
+            font-size:30px;
+            font-weight: bold;
+        }
+        .hot-words{
+            padding:20px 0;
+            font-size:0;
+            .item{
+                background:$theme-gray-bg;
+                display: inline-block;
+                font-size:24px;
+                line-height:60px;
+                padding:0 30px;
+                margin:20px 20px 0 0;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.sale-after-return-wrap {
+    min-height: 100%;
+    background: #f7f7f7;
+
+    .list {
+        .s-address {
+            background: #fff;
+            padding: 0 30px 30px;
+
+            .r-title {
+                font-size: 30px;
+                line-height: 90px;
+            }
+
+            .r-content {
+                min-height: 138px;
+                background: #f7f7f7;
+                padding: 0 30px;
+
+                .contact-wrap {
+                    display: flex;
+                    font-size: 30px;
+                    font-weight: bold;
+                    height: 80px;
+                    line-height: 80px;
+
+                    .r-name {
+                        font-weight: inherit;
+                    }
+
+                    .r-phone {
+                        flex: 1;
+                        padding-left: 100px;
+                        font-weight: inherit;
+                    }
+                }
+
+                .r-address {
+                    font-size: 26px;
+                }
+            }
+
+        }
+
+        .express-wrap {
+            margin-top: 20px;
+            background: #fff;
+
+            .e-title {
+                padding: 0 30px;
+                font-size: 30px;
+                line-height: 90px;
+            }
+
+            .cell-custom-item {
+                min-height: 110px;
+                margin-bottom: 30px;
+            }
+
+            .btns-wrap {
+                margin: 80px 50px;
+
+                .submit-btn {
+                    background-color: $edit-buttons-bg;
+                    border-color: $edit-buttons-bg;
+                    border-radius: 20px;
+                    color:#fff;
+                    font-size: 30px;
+                    height: 90px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .choose-company-wrap {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+
+        .title {
+            font-size: 36px;
+            height: 110px;
+            line-height: 110px;
+            text-align: center;
+        }
+
+        .inner-content {
+            flex: 1;
+            margin: 0 22px;
+            overflow: auto;
+            scroll-behavior: smooth;
+
+            /deep/ .van-cell__title {
+                font-size: 30px;
+            }
+
+            .active-icon {
+                color: $font-active-cls;
+            }
+
+            .choose-cell {
+                background: #f8f8f8;
+            }
+        }
+    }
+}

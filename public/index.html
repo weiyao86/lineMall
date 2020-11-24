@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+        <link rel="icon">
+        <title> zgyd-h5 </title>
+        <script>
+
+            //静待APP实现
+            function invokeBackStage(state) {
+                // window.myVue && window.myVue.$store.commit("setApiGlobalResume",state);
+            }
+
+            apiready = function () {
+                //监听APP进入后台
+                api.addEventListener(
+                    {
+                        name: "pause"
+                    },
+                    function (ret,err) {
+                        invokeBackStage("pause")
+                    }
+                );
+                api.addEventListener(
+                    {
+                        name: "resume"
+                    },
+                    function (ret,err) {
+                        invokeBackStage("resume")
+                    }
+                );
+
+                //检测APP所需权限是否开启，并提示用户开启对应权限
+                var publicFunction = {
+                    //callBack回调事件可自行在调用的时候写入
+                    checkPermission: function (list,callBack) {
+
+                        var mapObj = {
+                            camera: '相机',
+                            photos: '相册',
+                            storage: '存储',
+                            location: '定位',
+                            notification: '通知'
+                        };
+
+                        //设置相关权限
+                        if (api.systemType == 'ios') {
+                            callback('ios not set',true);
+                            return false;
+                        }
+
+                        //跳转设置权限
+                        function confirmRequest(items,callBack) {
+                            var names = [];
+                            for (var i = 0,item; item = items[i]; i++) {
+                                names.push(mapObj[item]);
+                            }
+                            names = names.join('\n');
+                            api.confirm({
+                                title: '提醒',
+                                msg: '系统需要获取\n' + names + "等权限\n是否前往设置？",
+                                buttons: ['去设置','取消']
+                            },function (ret,err) {
+                                if (1 == ret.buttonIndex) {
+                                    api.requestPermission({
+                                        list: items,
+                                        code: 100001
+                                    },function (ret,err) {
+                                        callBack(names,true);
+                                    });
+                                } else {
+                                    callBack(names,false);
+                                }
+                            });
+                        }
+
+                        var resultList = api.hasPermission({
+                            list: list
+                        });
+
+                        var noPermission = [];
+                        for (var i = 0,item; item = resultList[i]; i++) {
+
+                            if (item.granted == false) {
+                                //  confirmRequest(item);
+                                noPermission.push(item.name);
+                            }
+                            else {
+                                callBack(item.name,true);
+                            }
+                        }
+
+                        if (noPermission.length) {
+                            confirmRequest(noPermission,callBack);
+                        }
+
+                    }
+                }
+                //验证照相、相册、存储、通知权限
+
+                var list = ['camera','photos','storage','notification','location'];
+                // var list=['camera','contacts','contacts-r','contacts-w','microphone','photos','location','locationAlways','notification','calendar','calendar-r','calendar-w','phone','phone-call','phone-r','phone-r-log','phone-w-log','sensor','sms','sms-s','sms-r','storage','storage-r','storage-w'];
+
+                publicFunction.checkPermission(list,function (name,success) {
+                    console.log(name + '--状态--' + success);
+                });
+            }
+
+    //camera               //相机/拍照/录像
+    //contacts             //联系人读取/写入
+    //contacts-r           //仅联系人读取
+    //contacts-w           //仅联系人写入
+    //microphone           //使用麦克风录制音频
+    //photos               //访问相册|本地存储空间。Android上等同storage权限
+    //location             //定位
+    //locationAlways       //后台定位，只支持iOS
+    //notification         //状态栏通知
+    //calendar             //日历读取/写入。只支持Android
+    //calendar-r           //仅日历读取
+    //calendar-w           //仅日历写入
+    //phone                //直接拨打电话/获取手机号码|IMEI。只支持Android
+    //phone-call           //仅直接拨打电话
+    //phone-r              //仅获取手机号码|IMEI
+    //phone-r-log          //读取通话记录
+    //phone-w-log          //写入通话记录
+    //sensor               //传感器.只支持Android
+    //sms                  //读取短信/后台发送短信。只支持Android
+    //sms-s                //仅后台发送短信
+    //sms-r                //仅读取短信
+    //storage              //读取/写入|相册|多媒体|本地存储空间。只支持Android
+    //storage-r            //仅写入|相册|多媒体|文件|本地存储空间
+    //storage-w            //仅读取|相册|多媒体|文件|本地存储空间
+        </script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+        <!-- <script src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script> -->
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.11&key=9696055810704b6827672d03a95a2eec">
+        </script>
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=VN92TsQe7G4glZbl1gHY0NhEQshNZU2q"></script>
+    </body>
+</html>

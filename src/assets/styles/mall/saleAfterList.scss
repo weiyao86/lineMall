@@ -1,0 +1,149 @@
+.sale-after-list-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $theme-gray-bg;
+
+    .list {
+        .categroy-item {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 30px 0;
+
+            .c-title {
+                margin: 0 30px;
+                display: flex;
+                justify-content: space-between;
+
+                .title-l,
+                .title-r {
+                    color: $text-color;
+                    font-size: 26px;
+                    font-weight: bold;
+                }
+
+                .title-r {
+                    color: $font-active-cls;
+                }
+            }
+
+            .inner-wrap {
+                .inner-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    padding:22px 30px;
+
+                    .img-wrap {
+                        width: 530px;
+                        height: 190px;
+                        line-height: 190px;
+                        overflow: auto;
+                        white-space: nowrap;
+                        margin-right: 10px;
+                        font-size: 0;
+
+                        .ad-img {
+                            width: 170px;
+                            height: 170px;
+                            object-fit: contain;
+                            border-radius: 10px;
+                            border:2px solid #e5e5e5;
+                            overflow: hidden;
+                            margin-right: 20px;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    .text-wrap {
+                        flex: 1;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: -12px 0px 10px -10px #ccc;
+
+                        .title {
+                            font-size: 26px;
+                            min-height: 36px;
+                            line-height: 36px;
+                            font-weight: bold;
+                            word-break: break-all;
+                            text-align: center;
+
+                            .symbol {
+                                font-size: 24px;
+                            }
+                        }
+
+                        .spec-wrap {
+                            padding: 0 20px;
+                            color: #999;
+                            font-size: 24px;
+                            min-height: 40px;
+                            line-height: 46px;
+                        }
+
+                        .bottom-wrap {
+                            height: 50px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+
+                            .price {
+                                color: $font-active-cls;
+                                font-size: 30px;
+                                font-weight: bold;
+
+                                .symbol {
+                                    font-size: 22px;
+                                }
+                            }
+
+                            .calc-num {
+                                font-size: 20px;
+
+                                .num {
+                                    padding-left: 10px;
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-total {
+                margin: 0 30px;
+                line-height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                min-width: 0;
+
+                .label-desc {
+                    color: #999;
+                    font-size: 24px;
+                }
+
+                .sn-text {
+                    flex: 1;
+                    padding: 0 4px;
+                    color: #999;
+                    font-size: 24px;
+                }
+                .btns-wrap{
+                    max-width:400px;
+                    .btn-item{
+                        color:$font-active-cls;
+                        border-color: $border-active-cls;
+                        font-size:26px;
+                        height:54px;
+                        width:150px;
+                        padding:0 15px;
+                        margin:0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

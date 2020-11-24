@@ -1,0 +1,114 @@
+.sale-after-wrap {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: $theme-gray-bg;
+    .list {
+        .categroy-item {
+            background-color: #fff;
+            margin: 20px 0;
+
+            .inner-wrap {
+                .inner-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: stretch;
+                    padding: 42px 30px;
+
+                    .ck-wrap {
+                        align-self: center;
+
+                        .check {
+                            width: 60px;
+                        }
+                    }
+
+                    .img-wrap {
+                        width: 190px;
+                        height: 190px;
+                        overflow: hidden;
+                        border: 2px solid #ededed;
+                        border-radius: 10px;
+
+                        .ad-img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .text-wrap {
+                        flex: 1;
+                        padding-left: 20px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-between;
+
+                        .title {
+                            font-size: 26px;
+                            line-height: 36px;
+                            height: 70px;
+                            word-break: break-all;
+                        }
+
+                        .spec-wrap {
+                            // padding: 0 20px;
+                            color: #999;
+                            font-size: 24px;
+                            min-height: 40px;
+                            line-height: 46px;
+
+                        }
+
+                        .bottom-wrap {
+                            height: 50px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+
+                            .price {
+                                color: $font-active-cls;
+                                font-size: 30px;
+                                font-weight: bold;
+
+                                .symbol {
+                                    font-size: 22px;
+                                }
+                            }
+                            .calc-num {
+                                font-size: 20px;
+                                .num {
+                                    padding-left: 10px;
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .upload-wrap{
+            padding:30px;
+            background:#fff;
+            .u-title{
+                font-size:30px;
+                font-weight: bold;
+                height:60px;
+            }
+            .u-img_wrap{
+                margin-top:30px;
+            }
+        }
+    }
+
+    .submit-btn {
+        .van-submit-bar__price {
+            color: $font-active-cls;
+        }
+
+        .van-button {
+            background: $border-active-cls;
+            border-color: $border-active-cls;
+            border-radius: 10px;
+        }
+    }
+}
